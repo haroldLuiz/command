@@ -99,7 +99,7 @@ class Command {
 
 	add(cmd, cb) {
 		if(Array.isArray(cmd)) {
-			for(let c of cmd) add(c, cb)
+			for(let c of cmd) this.add(c, cb)
 			return
 		}
 
