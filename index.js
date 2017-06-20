@@ -61,6 +61,7 @@ class Command {
 			}
 			catch(e) {
 				this.message('Error running callback for command "' + args[0] + '".')
+				console.error(e)
 			}
 		}
 
@@ -89,6 +90,7 @@ class Command {
 		let cmd = this.hooks[args[0].toLowerCase()]
 
 		if(cmd) {
+			args = args.slice()
 			args.shift()
 			cmd(...args)
 			return true
