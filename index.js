@@ -13,6 +13,7 @@ class Command {
 
 		this.loaded = false
 		this.hooks = {}
+		this.storage = {}
 
 		dispatch.hook('S_LOGIN', 2, () => { this.loaded = false })
 
